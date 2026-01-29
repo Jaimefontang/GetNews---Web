@@ -2,7 +2,7 @@
 
 Repositorio del proyecto GetNews, una página web responsive para la visualización de noticias y artículos de tecnología.
 
-**Enlace al proyecto:** https://jaimefontang.github.io/GetNews---Web/
+**Enlace al proyecto:** https://jaimefontang.github.io/GetNews-Web/
 
 ## Descripción
 
