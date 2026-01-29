@@ -41,7 +41,7 @@ Para ejecutar el proyecto localmente:
 * `/static`: Carpeta con imágenes y vídeos.
 * `index.html`: Archivo principal.
 
-  ## Galería de imágenes
+## Galería de imágenes
 
 ### Versión Escritorio
 **Modo Claro:**
@@ -51,4 +51,8 @@ Para ejecutar el proyecto localmente:
 ![Vista Modo Oscuro](static/imagenes/DesktopDarkMode_preview.png)
 
 ### Versión Móvil
-<img src="static/imagenes/Mobile_preview.png" width="300" alt="Vista Móvil">
+**Modo Claro:**
+<img src="static/imagenes/mobile_preview.png" width="300" alt="Móvil Claro">
+
+**Modo Oscuro:**
+<img src="static/imagenes/mobileDarkMode_preview.png" width="300" alt="Móvil Oscuro">
