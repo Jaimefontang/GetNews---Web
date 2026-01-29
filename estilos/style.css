@@ -1,0 +1,451 @@
+/* === 1. RESETEO Y CONFIGURACIÓN GENERAL === */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Bricolage Grotesque', monospace;
+  background: linear-gradient(to bottom right, #d3d3d3, #f2f2f2);
+  margin: 0;
+  padding: 0;
+}
+
+/* === 2. TIPOGRAFÍA Y TEXTOS === */
+
+h1,
+h2,
+p {
+  text-align: left;
+  margin: 0 10px 15px;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* === 3. HEADER Y NAVEGACIÓN === */
+
+header {
+  height: auto;
+  /* CAMBIO: auto para que crezca si se apila */
+  min-height: 40px;
+  align-content: center;
+  background: linear-gradient(to bottom right, #d3d3d3, #f2f2f2);
+  padding: 20px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* CAMBIO: Permite que bajen elementos si no caben */
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+/* Navegación principal */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* === 4. SECCIONES Y TARJETAS NEWS/REVIEWS === */
+
+.containerSection {
+  max-width: 1200px;
+  margin: 15px auto;
+  padding: 10px 20px;
+}
+
+.containerMedia {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* Por defecto 5 columnas */
+  gap: 16px;
+  padding: 20px 10px;
+  overflow: visible;
+}
+
+.card-style {
+  position: relative;
+  width: 100%;
+  padding-bottom: 141.6%;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(59, 58, 58, 0.3);
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-sizing: border-box;
+}
+
+.card-text {
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.card-text p {
+  display: inline-block;
+  transform: translateX(0);
+  margin: 0;
+  font-size: 12px;
+}
+
+.card-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.card-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+  transition: background-color 0.2s ease;
+}
+
+/* === 5. BOTONES (TEMA OSCURO, CLARO / SCROLL === */
+
+.toggle-theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: #3a3a3a;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 30px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 35px;
+}
+
+/* Contenedor del icono dentro del botón */
+.toggle-theme-btn .btn-icon {
+  background-color: #fff;
+  color: #2c2c2c;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* Botón para scroll */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.iconoTema,
+.iconoScroll {
+  margin-top: 4px;
+  width: 12px;
+  height: 12px;
+}
+
+/* === 6. VIDEOS HERO/NEWSLETTER === */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.hero-media,
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-media {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 15px;
+  /* Seguridad para que no toque bordes */
+}
+
+.hero-content h1,
+.hero-content p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content h1 {
+  font-size: 3.0rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* === 7. FORMULARIO NEWSLETTER === */
+
+.newsletter-form {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  /* Centrado para móvil */
+  padding-left: 10px;
+}
+
+.newsletter-form input[type="text"] {
+  font-family: inherit;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 14px;
+  min-width: 100px;
+  max-width: 20%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form .submitBtn {
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === 8. FOOTER === */
+
+footer {
+  background: linear-gradient(to bottom right, #d3d3d3, #f2f2f2);
+  padding: 10px 0 10px;
+  text-align: center;
+}
+
+footer .copyright {
+  text-align: center;
+  font-size: 10px;
+  color: #666;
+}
+
+#logoFooter {
+  width: 100px;
+  margin-right: 20px;
+}
+
+/* === 9. TEMA CLARO / OSCURO (modo-oscuro) === */
+
+body.modo-oscuro,
+body.modo-oscuro a,
+body.modo-oscuro header,
+body.modo-oscuro footer,
+body.modo-oscuro header a,
+body.modo-oscuro footer a,
+body.modo-oscuro footer p {
+  color: #f0f0f0;
+}
+
+body.modo-oscuro {
+  background: linear-gradient(to bottom right, #121212, #464646);
+}
+
+body.modo-oscuro header,
+body.modo-oscuro footer {
+  background: linear-gradient(to bottom right, #121212, #464646);
+}
+
+/*==== 10. ESTILOS HOVER ====*/
+
+nav ul li a:hover,
+.newsletter-form input:hover {
+  background-color: #d2d2d2;
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-form .submitBtn:hover,
+.scroll-top-btn:hover {
+  transform: scale(1.1);
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-theme-btn:hover {
+  background-color: #464646;
+  transform: scale(1.03);
+}
+
+.card-style:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-text:hover p {
+  transform: translateX(-100%);
+  transition: transform 10s linear;
+}
+
+.card-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.modo-oscuro nav ul li a:hover {
+  background-color: #444444;
+  box-shadow: inset 3px 3px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   11. RESPONSIVE / MÓVIL 
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  /* Ajustes para Tablets y móviles grandes */
+  .containerMedia {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas en vez de 5 */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Ajustes para MÓVILES */
+
+  /* Header vertical */
+  .headerContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Navegación centrada y pequeña */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  /* Tarjetas: 1 sola columna para que se vean grandes */
+  .containerMedia {
+    grid-template-columns: 1fr;
+    padding: 10px 20px;
+  }
+
+  /* Newsletter: Input ocupa todo el ancho */
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form input[type="text"] {
+    max-width: 100%;
+    /* Forzamos ancho completo */
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form .submitBtn {
+    width: 100%;
+    /* Botón grande para dedo */
+  }
+
+  /* Texto Hero más pequeño */
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+}

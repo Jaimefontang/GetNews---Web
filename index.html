@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getnews.com</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="estilos/style.css" />
+</head>
+
+<body id="inicioIndex">
+
+  <header>
+    <div class="headerContainer">
+
+      <a href="#inicioIndex">
+        <img src="static/imagenes/LogoB.png" alt="Technews Logo" id="logoPrincipal" class="logo" />
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#noticias">News</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </nav>
+
+      <button id="btnModoOscuro" class="toggle-theme-btn">
+        <span id="textoTema" class="btn-text">Tema oscuro</span>
+        <span id="contIcono" class="btn-icon">
+          <img id="iconoTema" src="static/imagenes/iconMoon.png" alt="Icono cambio de modo" class="iconoTema" />
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video class="hero-media" autoplay muted loop playsinline poster="static/imagenes/poster.png">
+      <source src="static/videos/videoBienvenida.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Bienvenido a Getnews</h1>
+      <p>Explora nuestras secciones y sumérgete en un universo de información, análisis y descubrimientos tecnológicos.
+      </p>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="noticias" class="containerSection">
+      <h2>News</h2>
+      <p>Mantente informado con las novedades y tendencias tecnológicas más relevantes del momento.</p>
+      <div class="containerMedia">
+        <article class="card-style">
+          <img src="static/imagenes/New1.png" alt="Inteligencia Artificial" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>IA en el trabajo</strong>
+              <p>Chatbots y algoritmos en empresas de todo el mundo.</p>
+            </div>
+            <a href="https://novatierra.com/los-agentes-de-ia-revolucionaran-el-trabajo-en-2025-segun-gartner/"
+              target="_blank" class="card-btn">Leer</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/New2.png" alt="Starlink se amplía" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Starlink se amplía</strong>
+              <p>Elon Musk lanza 60 nuevos satélites.</p>
+            </div>
+            <a href="https://altadensidad.com/no-mas-zonas-sin-conexion-movil-starlink-anuncia-su-servicio-satelital-para-telefonos-en-fase-beta/"
+              target="_blank" class="card-btn">Leer</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/New3.png" alt="Chips médicos" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Chips médicos</strong>
+              <p>Dispositivos inteligentes logran identificar patologías.</p>
+            </div>
+            <a href="https://www.agenciasinc.es/Noticias/Chips-miniaturizados-para-detectar-enfermedades-desde-el-interior-de-celulas-vivas"
+              target="_blank" class="card-btn">Leer</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/New4.png" alt="Nueva generación de baterías" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>¿Adiós al litio?</strong>
+              <p>Científicos desarrollan celdas que duran cinco veces más.</p>
+            </div>
+            <a href="https://www.infobae.com/tecno/2024/09/24/las-baterias-de-celulares-cambiaran-este-es-el-nuevo-material-y-el-por-que-se-transformaran/"
+              target="_blank" class="card-btn">Leer</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/New5.png" alt="Aranceles EEUU" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Aranceles EEUU</strong>
+              <p>Nuevas medidas lanzadas por Trump para los aranceles impuesto a la UE en tecnología.</p>
+            </div>
+            <a href="https://www.ondacero.es/noticias/economia/que-aranceles-cobra-europa-estados-unidos_2025040467efc1c4eec2d300014583b8.html"
+              target="_blank" class="card-btn">Leer</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="hero">
+      <video class="hero-media" autoplay muted loop playsinline poster="static/imagenes/poster.png">
+        <source src="static/videos/VideoSeparador.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>La información es poder</h1>
+        <P>y aquí mandas tú.</P>
+      </div>
+    </section>
+
+    <section id="reviews" class="containerSection">
+      <h2>Reviews</h2>
+      <p>Análisis exhaustivos de los últimos gadgets y dispositivos para ayudarte a elegir con criterio.</p>
+      <div class="containerMedia">
+        <article class="card-style">
+          <img src="static/imagenes/miniatura2.jpeg" alt="Huawei Mate XT review" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Huawei Mate XT</strong>
+              <p>Review completa</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=GtT3K0tSqFw" target="_blank" class="card-btn">➤ Ver</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/miniatura3.jpg" alt="DYB Tang EV600" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>BYD Tang EV600</strong>
+              <p>Review completa</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=k3Gxe2QQcyw" target="_blank" class="card-btn">➤ Ver</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/miniatura4.jpeg" alt="Samsung XR review" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Samsung XR</strong>
+              <p>Review completa</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=xZQpRHhodzE" target="_blank" class="card-btn">➤ Ver</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/miniatura5.jpeg" alt="Iphone 16E review" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Iphone 16E</strong>
+              <p>Review completa</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=u_C4LLILZyE" target="_blank" class="card-btn">➤ Ver</a>
+          </div>
+        </article>
+        <article class="card-style">
+          <img src="static/imagenes/miniatura1.jpeg" alt="Galaxy S25 Ultra review" class="card-img" />
+          <div class="card-info">
+            <div class="card-text">
+              <strong>Galaxy S25 Ultra</strong>
+              <p>Review completa</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=xZQpRHhodzE" target="_blank" class="card-btn">➤
+              Ver</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="hero subscribe-hero">
+      <video class="hero-media" autoplay muted loop playsinline poster="static/imagenes/poster.png">
+        <source src="static/videos/videoNewsletter.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>¿Quieres más?</h1>
+        <p>Suscríbete y recibe cada semana las noticias más destacadas en tu buzón.</p>
+        <div id="contSusc">Ya somos <span id="numSusc">1200</span>, ¡Únete!</div>
+
+        <form id="newsletter" action="servicio.php" method="post" class="newsletter-form">
+          <input type="text" name="nombre" placeholder="Nombre" />
+          <input type="text" name="apellidos" placeholder="Apellidos" />
+          <input type="text" name="email" placeholder="Email" />
+          <button type="submit" class="submitBtn">Suscribirse</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <img id="logoFooter" src="static/imagenes/LogoB.png" alt="Logo Getnews">
+    <button class="scroll-top-btn">
+      <img id="iconoTema" src="static/imagenes/up-arrow.png" alt="Icono del Scroll" class="iconoScroll" />
+    </button>
+    <p class="copyright">&copy; 2025 www.Getnews.com Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
